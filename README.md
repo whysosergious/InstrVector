@@ -1,2 +1,2 @@
-statefull.component -> component - - - -> [component, integrations, api, packages]
-          \________________________________________________/
+### statefull.component -> component - - - -> [component, integrations, api, packages]
+ 
