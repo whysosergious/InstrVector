@@ -1,0 +1,568 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://elements/SimonBtn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main.cs" type="Script" id=2]
+[ext_resource path="res://assets/fonts/Oxygen-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/icons/TimerIcon.png" type="Texture" id=4]
+[ext_resource path="res://elements/StartRoundBtn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://anim/AnimPack.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/background/BackgroundGrain.png" type="Texture" id=7]
+[ext_resource path="res://assets/background/elements/BigCircle.png" type="Texture" id=8]
+[ext_resource path="res://assets/background/elements/DarkCircle.png" type="Texture" id=9]
+[ext_resource path="res://elements/userPolygonGroup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/background/elements/LightCircle.png" type="Texture" id=11]
+[ext_resource path="res://assets/background/elements/RedPolygon.png" type="Texture" id=12]
+[ext_resource path="res://assets/fonts/ArgentumSans-Regular.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://assets/misc/light.png" type="Texture" id=14]
+[ext_resource path="res://anim/CameraShake.tres" type="Animation" id=15]
+[ext_resource path="res://anim/OppPolygonsBreathe.tres" type="Animation" id=16]
+[ext_resource path="res://shaders/first.tres" type="Shader" id=17]
+[ext_resource path="res://anim/BackgroundElementsBreathe.tres" type="Animation" id=18]
+[ext_resource path="res://elements/Point.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/misc/spot.png" type="Texture" id=20]
+[ext_resource path="res://elements/Menu/SettingsButton.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/fonts/SquadaOne-Regular.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://assets/fonts/ArgentumSans-Italic.ttf" type="DynamicFontData" id=23]
+[ext_resource path="res://elements/QuickMenuContainer.tscn" type="PackedScene" id=24]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.160784, 0.309804, 0.376471, 1, 0.294118, 0.298039, 0.25098, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 8184
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0.427451, 0.137255, 0.121569, 1, 0.160784, 0.309804, 0.376471, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+width = 8184
+
+[sub_resource type="OccluderPolygon2D" id=5]
+polygon = PoolVector2Array( 336.012, 166.436, 333.57, 151.014, 323.932, 140.99, 310.053, 137.649, 294.503, 144.331, 287.634, 156.625, 288.976, 172.604, 299.9, 184.042, 315.45, 186.741, 330.486, 178.516 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 17 )
+
+[sub_resource type="StreamTexture" id=7]
+flags = 4
+load_path = "res://.import/light.png-9f54f82f0a5191c95852c8cd6f8e34db.stex"
+
+[sub_resource type="DynamicFont" id=8]
+size = 55
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 45
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 34
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 120
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 54
+font_data = ExtResource( 23 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 249.88, 426.579 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackgroundElements" type="TextureRect" parent="."]
+margin_left = -29.0
+margin_top = -61.0
+margin_right = 389.0
+margin_bottom = 799.0
+rect_clip_content = true
+mouse_filter = 2
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RollingBgGroup" type="Node2D" parent="BackgroundElements"]
+position = Vector2( 0, 72 )
+scale = Vector2( 1.2, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RollingBg1" type="TextureRect" parent="BackgroundElements/RollingBgGroup"]
+margin_left = 360.0
+margin_top = -1480.0
+margin_right = 2580.0
+margin_bottom = -1120.0
+rect_rotation = 90.0
+mouse_filter = 2
+texture = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RollingBg2" type="TextureRect" parent="BackgroundElements/RollingBgGroup"]
+margin_left = 360.0
+margin_top = -3700.0
+margin_right = 2580.0
+margin_bottom = -3340.0
+rect_rotation = 90.0
+mouse_filter = 2
+texture = SubResource( 4 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="bgCircle1" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0.572549, 0.435294, 0.8, 0.027451 )
+position = Vector2( -52.4848, 662.625 )
+scale = Vector2( 0.348456, 0.348456 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="bgCircle2" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0, 0, 0, 0.027451 )
+position = Vector2( 41.2116, 100.514 )
+scale = Vector2( 0.441399, 0.441399 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bgCircle3" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0, 0.321569, 1, 0.0352941 )
+position = Vector2( 55.028, 152.542 )
+scale = Vector2( 0.379316, 0.379316 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bgCircle4" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0, 0, 1, 0.0431373 )
+position = Vector2( 309.65, 371.755 )
+scale = Vector2( 0.384414, 0.384414 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bgCircle5" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0, 0, 0, 0.0235294 )
+position = Vector2( 288.178, 405.709 )
+scale = Vector2( 0.337964, 0.337964 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="bgCircle6" type="Sprite" parent="BackgroundElements"]
+modulate = Color( 0, 0, 0, 0.0117647 )
+position = Vector2( 369.188, -6.63375 )
+scale = Vector2( 0.279895, 0.279895 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackgroundPlayer" type="AnimationPlayer" parent="BackgroundElements"]
+root_node = NodePath("../bgCircle1")
+autoplay = "BackgroundElementsBreathe"
+playback_default_blend_time = 1184.39
+playback_speed = 0.5
+anims/BackgroundElementsBreathe = ExtResource( 18 )
+
+[node name="Light" type="Node2D" parent="."]
+position = Vector2( -126.067, 87.856 )
+rotation = 0.747981
+scale = Vector2( 1.22989, 1.22989 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BackgroundGrain" type="TextureRect" parent="Light"]
+modulate = Color( 0.164706, 0.0470588, 0.101961, 0.682353 )
+margin_left = -7.61
+margin_top = -136.746
+margin_right = 318.39
+margin_bottom = 531.254
+rect_rotation = -42.705
+mouse_filter = 2
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Light"]
+position = Vector2( -43.1802, -309.932 )
+rotation = -9.6845e-08
+scale = Vector2( 1.23093, 1.23093 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 141.131, 287.304 )
+rotation = -0.747981
+scale = Vector2( 0.703612, 0.703612 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 68.2948, 376.197 )
+rotation = -0.747981
+scale = Vector2( 0.613431, 0.613431 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 156.811, 394.846 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 96.4893, 443.801 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 211.151, 341.19 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 266.23, 409.857 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 223.896, 464.242 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Light/Sprite"]
+position = Vector2( 166.124, 504.896 )
+rotation = -0.747981
+scale = Vector2( 0.676855, 0.676855 )
+occluder = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Light/Sprite"]
+visible = false
+light_mask = 31
+position = Vector2( -147.047, 306.68 )
+rotation = -0.747981
+scale = Vector2( 1.2, 1.2 )
+occluder = SubResource( 5 )
+light_mask = 31
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light1" type="Light2D" parent="Light"]
+light_mask = 3
+position = Vector2( 258.295, -153.55 )
+rotation = -2.98023e-08
+scale = Vector2( 0.0725488, 0.0725488 )
+texture = ExtResource( 14 )
+texture_scale = 12.85
+color = Color( 0.843137, 0.607843, 0.211765, 0.137255 )
+energy = 1.5
+range_item_cull_mask = 3
+shadow_enabled = true
+shadow_color = Color( 0.0901961, 0.0862745, 0.0862745, 0 )
+shadow_gradient_length = 7.0
+shadow_filter = 5
+shadow_filter_smooth = 2.0
+shadow_item_cull_mask = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2" type="Light2D" parent="Light"]
+light_mask = 3
+material = SubResource( 6 )
+position = Vector2( 158.755, -10.6091 )
+rotation = -2.98023e-08
+scale = Vector2( 0.0725488, 0.0725488 )
+texture = SubResource( 7 )
+texture_scale = 12.85
+color = Color( 0.321569, 0.0823529, 0.286275, 0.807843 )
+energy = 0.8
+range_item_cull_mask = 3
+shadow_enabled = true
+shadow_color = Color( 0.0901961, 0.0156863, 0.0156863, 0 )
+shadow_filter = 5
+shadow_filter_smooth = 5.0
+shadow_item_cull_mask = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Light"]
+position = Vector2( 26.5543, -122.084 )
+rotation = -0.747981
+scale = Vector2( 0.813078, 0.813078 )
+color = Color( 0.776471, 0.67451, 0.74902, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OppPolygonGroup" type="Node2D" parent="."]
+position = Vector2( 181.965, 136.21 )
+z_index = 2
+
+[node name="OppPolygon1" type="Sprite" parent="OppPolygonGroup"]
+modulate = Color( 1, 1, 1, 0.329412 )
+position = Vector2( -0.191162, 1.91919 )
+rotation = -0.30534
+scale = Vector2( 0.0557353, 0.0557353 )
+texture = ExtResource( 12 )
+
+[node name="OppPolygon2" type="Sprite" parent="OppPolygonGroup"]
+modulate = Color( 1, 1, 1, 0.294118 )
+position = Vector2( -0.0651855, -2.02234 )
+rotation = 0.00247256
+scale = Vector2( 0.0621197, 0.0621197 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OppPolygonPlayer" type="AnimationPlayer" parent="OppPolygonGroup"]
+autoplay = "OppPolygonsBreathe"
+anims/OppPolygonsBreathe = ExtResource( 16 )
+
+[node name="Point" parent="." instance=ExtResource( 19 )]
+visible = false
+
+[node name="userPolygonGroup" parent="." instance=ExtResource( 10 )]
+position = Vector2( 181.764, 243.692 )
+z_index = 2
+
+[node name="SimonGroup" type="Node2D" parent="."]
+light_mask = 2
+z_index = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SimonBtn1" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 71.6737, 411.124 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="SimonBtn2" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 285.009, 408.491 )
+
+[node name="SimonBtn3" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 63.0599, 529.599 )
+
+[node name="SimonBtn4" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 181.59, 537.99 )
+
+[node name="SimonBtn5" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 296.028, 534.48 )
+
+[node name="SimonBtn6" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 77.8881, 670.171 )
+
+[node name="SimonBtn7" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 183.226, 684.22 )
+
+[node name="SimonBtn8" parent="SimonGroup" instance=ExtResource( 1 )]
+position = Vector2( 287.36, 666.307 )
+
+[node name="LabelGroup" type="Node2D" parent="."]
+position = Vector2( 0, 16 )
+z_index = 3
+
+[node name="UserScoreLbl" type="Label" parent="LabelGroup"]
+margin_left = 82.9404
+margin_top = 186.707
+margin_right = 282.94
+margin_bottom = 263.707
+rect_pivot_offset = Vector2( 99.6324, 39.9587 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.886275, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UserScoreOrigin" type="Node2D" parent="LabelGroup"]
+position = Vector2( 182.11, 235.234 )
+
+[node name="OppScoreLbl" type="Label" parent="LabelGroup"]
+anchor_top = -0.000943694
+anchor_bottom = -0.000943694
+margin_left = 132.266
+margin_top = 90.4088
+margin_right = 232.266
+margin_bottom = 148.409
+rect_pivot_offset = Vector2( 49.8106, 30.2242 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.905882, 0.894118, 1, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OppScoreOrigin" type="Node2D" parent="LabelGroup"]
+position = Vector2( 182.11, 112.234 )
+
+[node name="RoundTimerLbl" type="Label" parent="LabelGroup"]
+margin_left = 130.749
+margin_top = 38.8915
+margin_right = 230.749
+margin_bottom = 80.8915
+rect_pivot_offset = Vector2( 49.7973, 20.3358 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.184314 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 3
+text = "30.0s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timerIcon" type="TextureRect" parent="LabelGroup"]
+modulate = Color( 1, 1, 1, 0.807843 )
+margin_left = 171.968
+margin_top = 13.7919
+margin_right = 265.968
+margin_bottom = 107.792
+rect_scale = Vector2( 0.22, 0.22 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartRoundBtn" parent="." instance=ExtResource( 5 )]
+position = Vector2( 285.745, 32.5021 )
+z_index = 3
+
+[node name="SettingsButton" parent="." instance=ExtResource( 21 )]
+position = Vector2( 31.8339, 33.1661 )
+z_index = 7
+
+[node name="AnimPack" parent="." instance=ExtResource( 6 )]
+
+[node name="MainCamera" type="Camera2D" parent="."]
+position = Vector2( 180, 370 )
+rotating = true
+current = true
+
+[node name="Player" type="AnimationPlayer" parent="MainCamera"]
+anims/CameraShake = ExtResource( 15 )
+
+[node name="OppNameGroup" type="Node2D" parent="."]
+position = Vector2( 124.453, 116.579 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="OppNameGroup"]
+margin_left = -110.606
+margin_top = -28.0375
+margin_right = 247.394
+margin_bottom = 110.962
+rect_pivot_offset = Vector2( 79.4646, 35.5249 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0.396078, 0.545098, 0.541176, 0.0784314 )
+text = "Bambi"
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="vs" type="Label" parent="OppNameGroup"]
+margin_left = -88.4777
+margin_top = -69.9934
+margin_right = -34.4777
+margin_bottom = 7.00659
+rect_pivot_offset = Vector2( 20.814, 34.666 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 0.396078, 0.545098, 0.541176, 0.0588235 )
+text = "vs"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MainTouch" type="Area2D" parent="."]
+gravity_vec = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_damp = 0.0
+monitoring = false
+monitorable = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Col" type="CollisionShape2D" parent="MainTouch"]
+visible = false
+position = Vector2( 180, 370 )
+shape = SubResource( 13 )
+
+[node name="QuickMenuContainer" parent="." instance=ExtResource( 24 )]
+visible = false
+z_index = 4
+[connection signal="body_entered" from="Point" to="userPolygonGroup" method="_on_Point_Collided"]
+[connection signal="body_entered" from="userPolygonGroup" to="Point" method="_on_Point_Collided"]

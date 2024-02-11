@@ -1,0 +1,247 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "BackgroundElementsBreathe"
+length = 140.0
+loop = true
+step = 0.01
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -52.4848, -0.25, 0, 0.25, 0, -20.627, -0.25, 0, 0.25, 0, 79.1972, -0.25, 0, 0.25, 0, 25.1207, -0.25, 0, 0.25, 0, -68.2779, -0.25, 0, 0.25, 0, -87.3837, -0.25, 0, 0.25, 0, -71.157, -0.25, 0, 0.25, 0, 21.3338, -0.25, 0, 0.25, 0, 58.3188, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 13.4, 27, 27.1, 58.3, 91.8, 102.8, 123.9, 140 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 662.625, -0.25, 0, 0.25, 0, 833.329, -0.25, 0, 0.25, 0, 1026.52, -0.25, 0, 0.25, 0, -280.937, -0.25, 0, 0.25, 0, -11.952, -0.25, 0, 0.25, 0, 222.341, -0.25, 0, 0.25, 0, 398.046, -0.25, 0, 0.25, 0, 562.311, -0.25, 0, 0.25, 0, 716.277, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 13.4, 27, 27.1, 58.3, 91.8, 102.8, 123.9, 140 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../bgCircle3:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 55.028, -0.25, 0, 0.25, 0, 88.4317, -0.25, 0, 0.25, 0, 44.4795, -0.25, 0, 0.25, 0, 127.11, -0.25, 0, 0.25, 0, 148.207, -0.25, 0, 0.25, 0, -247.363, -0.25, 0, 0.25, 0, -178.798, -0.25, 0, 0.25, 0, 47.9958, -0.25, 0, 0.25, 0, 75.5423, -0.25, 0, 0.25, 0, 55.028, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 23.3, 44.9, 84, 109, 110, 111, 112, 123.7, 140 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../bgCircle3:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 152.542, -0.25, 0, 0.25, 0, 310.77, -0.25, 0, 0.25, 0, 428.562, -0.25, 0, 0.25, 0, 657.114, -0.25, 0, 0.25, 0, 875.117, -0.25, 0, 0.25, 0, 897.972, -0.25, 0, 0.25, 0, -134.027, -0.25, 0, 0.25, 0, -132.269, -0.25, 0, 0.25, 0, -2.91937, -0.25, 0, 0.25, 0, 152.542, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 23.3, 44.9, 84, 109, 110, 111, 112, 123.7, 140 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("../bgCircle2:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 41.2116, -0.25, 0, 0.25, 0, 85.3742, -0.25, 0, 0.25, 0, 60.9957, -0.25, 0, 0.25, 0, 40.1902, -0.25, 0, 0.25, 0, 60.7891, -0.25, 0, 0.25, 0, 96.2267, -0.25, 0, 0.25, 0, 99.5293, -0.25, 0, 0.25, 0, 99.5293, -0.25, 0, 0.25, 0, -246.878, -0.25, 0, 0.25, 0, -347.355, -0.25, 0, 0.25, 0, 9.44113, -0.25, 0, 0.25, 0, 59.9684, -0.25, 0, 0.25, 0, 41.2116, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 15.4, 32.8, 48.6, 58.4, 79.1, 93.6, 108.5, 109.2, 110, 112.2, 124.7, 140 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("../bgCircle2:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 100.514, -0.25, 0, 0.25, 0, 242.08, -0.25, 0, 0.25, 0, 338.849, -0.25, 0, 0.25, 0, 429.53, -0.25, 0, 0.25, 0, 510.586, -0.25, 0, 0.25, 0, 616.799, -0.25, 0, 0.25, 0, 730.345, -0.25, 0, 0.25, 0, 884.304, -0.25, 0, 0.25, 0, 911.13, -0.25, 0, 0.25, 0, -192.066, -0.25, 0, 0.25, 0, -151.055, -0.25, 0, 0.25, 0, 18.4965, -0.25, 0, 0.25, 0, 100.514, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 15.4, 32.8, 48.6, 58.4, 79.1, 93.6, 108.5, 109.2, 110, 112.2, 124.7, 140 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("../bgCircle5:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 288.178, -0.25, 0, 0.25, 0, 278.51, -0.25, 0, 0.25, 0, 260.35, -0.25, 0, 0.25, 0, 250.295, -0.25, 0, 0.25, 0, 289.678, -0.25, 0, 0.25, 0, 330.391, -0.25, 0, 0.25, 0, 334.98, -0.25, 0, 0.25, 0, 361.615, -0.25, 0, 0.25, 0, 388.39, -0.25, 0, 0.25, 0, 331.879, -0.25, 0, 0.25, 0, 288.178, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 14.7, 20.5, 26.1, 45.8, 76.2, 84, 84.1, 86.8, 98.3, 140 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("../bgCircle5:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 405.709, -0.25, 0, 0.25, 0, 504.982, -0.25, 0, 0.25, 0, 567.347, -0.25, 0, 0.25, 0, 601.383, -0.25, 0, 0.25, 0, 650.672, -0.25, 0, 0.25, 0, 770.963, -0.25, 0, 0.25, 0, 896.887, -0.25, 0, 0.25, 0, -142.086, -0.25, 0, 0.25, 0, -73.9001, -0.25, 0, 0.25, 0, 79.921, -0.25, 0, 0.25, 0, 405.709, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 14.7, 20.5, 26.1, 45.8, 76.2, 84, 84.1, 87.1, 98.3, 140 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("../bgCircle4:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 309.65, -0.25, 0, 0.25, 0, 313.774, -0.25, 0, 0.25, 0, 279.625, -0.25, 0, 0.25, 0, 335.617, -0.25, 0, 0.25, 0, 355.665, -0.25, 0, 0.25, 0, 384.304, -0.25, 0, 0.25, 0, 504.59, -0.25, 0, 0.25, 0, 449.226, -0.25, 0, 0.25, 0, 358.975, -0.25, 0, 0.25, 0, 330.202, -0.25, 0, 0.25, 0, 297.276, -0.25, 0, 0.25, 0, 309.674, -0.25, 0, 0.25, 0, 309.65, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 15.9, 23.6, 47.13, 67.71, 70.11, 70.71, 71.11, 73.41, 99.7, 116.5, 131.7, 140 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("../bgCircle4:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 371.755, -0.25, 0, 0.25, 0, 495.798, -0.25, 0, 0.25, 0, 569.484, -0.25, 0, 0.25, 0, 673.567, -0.25, 0, 0.25, 0, 801.013, -0.25, 0, 0.25, 0, 828.22, -0.25, 0, 0.25, 0, 836.812, -0.25, 0, 0.25, 0, -98.2391, -0.25, 0, 0.25, 0, -86.8391, -0.25, 0, 0.25, 0, 51.7549, -0.25, 0, 0.25, 0, 181.697, -0.25, 0, 0.25, 0, 281.761, -0.25, 0, 0.25, 0, 371.755, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 15.9, 23.6, 47.13, 67.71, 70.11, 70.71, 71.11, 73.41, 99.7, 116.5, 131.7, 140 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("../bgCircle6:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 369.188, -0.25, 0, 0.25, 0, 313.996, -0.25, 0, 0.25, 0, 288.038, -0.25, 0, 0.25, 0, 293.911, -0.25, 0, 0.25, 0, 305.212, -0.25, 0, 0.25, 0, 280.354, -0.25, 0, 0.25, 0, 276.633, -0.25, 0, 0.25, 0, 338.43, -0.25, 0, 0.25, 0, 363.483, -0.25, 0, 0.25, 0, 749.296, -0.25, 0, 0.25, 0, 497.098, -0.25, 0, 0.25, 0, 404.13, -0.25, 0, 0.25, 0, 369.188, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 10.7, 28.1, 42.7, 58.8, 89.9, 100, 118.6, 123.5, 124.1, 124.5, 130.9, 140 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("../bgCircle6:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( -6.63375, -0.25, 0, 0.25, 0, 2.95553, -0.25, 0, 0.25, 0, 68.2241, -0.25, 0, 0.25, 0, 161.73, -0.25, 0, 0.25, 0, 266.298, -0.25, 0, 0.25, 0, 449.22, -0.25, 0, 0.25, 0, 582.3, -0.25, 0, 0.25, 0, 737.627, -0.25, 0, 0.25, 0, 814.455, -0.25, 0, 0.25, 0, 822.806, -0.25, 0, 0.25, 0, -75.7538, -0.25, 0, 0.25, 0, -43.0106, -0.25, 0, 0.25, 0, -6.63375, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 10.7, 28.1, 42.7, 58.8, 89.9, 100, 118.6, 123.5, 124.1, 124.5, 130.9, 140 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../RollingBgGroup/RollingBg1:rect_position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 28, 28.01, 56, 84, 84.01, 112, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 360, -1480 ), Vector2( 360, 740 ), Vector2( 360, -3692.07 ), Vector2( 360, -1480 ), Vector2( 360, 740 ), Vector2( 360, -3692.07 ), Vector2( 360, -1480 ), Vector2( 360, 740 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../RollingBgGroup/RollingBg2:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 28, 56, 56.01, 84, 112, 112.01, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 360, -3700 ), Vector2( 360, -1480 ), Vector2( 360, 740 ), Vector2( 360, -3692.07 ), Vector2( 360, -1480 ), Vector2( 360, 740 ), Vector2( 360, -3692.07 ), Vector2( 360, -1480 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../RollingBgGroup/RollingBg1:texture:gradient:colors")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 28, 28.01, 84.01 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolColorArray( 0.160784, 0.309804, 0.376471, 1, 0.294118, 0.298039, 0.25098, 1 ), PoolColorArray( 0.160784, 0.309804, 0.376471, 1, 0.294118, 0.298039, 0.25098, 1 ), PoolColorArray( 0.00784314, 0.12549, 0.219608, 1, 0.427451, 0.137255, 0.121569, 1 ), PoolColorArray( 0.25098, 0.298039, 0.27451, 1, 0.00392157, 0.0784314, 0.0980392, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../RollingBgGroup/RollingBg2:texture:gradient:colors")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 56, 56.01, 112, 112.01 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolColorArray( 0.427451, 0.137255, 0.121569, 1, 0.160784, 0.309804, 0.376471, 1 ), PoolColorArray( 0.427451, 0.137255, 0.121569, 1, 0.160784, 0.309804, 0.376471, 1 ), PoolColorArray( 0.00392157, 0.0784314, 0.0980392, 1, 0.00784314, 0.12549, 0.219608, 1 ), PoolColorArray( 0.00392157, 0.0784314, 0.0980392, 1, 0.00784314, 0.12549, 0.219608, 1 ), PoolColorArray( 0.160784, 0.309804, 0.376471, 1, 0.25098, 0.298039, 0.27451, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath(".:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 44.9, 71.3, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.572549, 0.435294, 0.8, 0.027451 ), Color( 0.572549, 0.435294, 0.8, 0.027451 ), Color( 16.1882, 6.38824, 20.2392, 0.00784314 ), Color( 0.572549, 0.435294, 0.8, 0.027451 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../bgCircle5:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 44.9, 71.3, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.0235294 ), Color( 0, 0, 0, 0.0235294 ), Color( 0.392157, 0.541176, 0.67451, 0.0235294 ), Color( 0, 0, 0, 0.0235294 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../bgCircle4:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 140 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 1, 0.0431373 ), Color( 0, 0, 1, 0.0431373 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("../bgCircle3:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 55.47, 90.59, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0.321569, 1, 0.0352941 ), Color( 0, 0.321569, 1, 0.0352941 ), Color( 7.36078, 6.36863, 5.63922, 0.0117647 ), Color( 0, 0.321569, 1, 0.0352941 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../bgCircle2:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 56.57, 94.85, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.027451 ), Color( 0, 0, 0, 0.027451 ), Color( 0.98, 0.74, 2.7, 0.01 ), Color( 0, 0, 0, 0.027451 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../bgCircle6:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 51.03, 89.48, 140 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.0117647 ), Color( 0, 0, 0, 0.0117647 ), Color( 0.99, 0.99, 2.21, 0.01 ), Color( 0, 0, 0, 0.0117647 ) ]
+}

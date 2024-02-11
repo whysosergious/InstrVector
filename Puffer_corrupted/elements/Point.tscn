@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/misc/Point1.png" type="Texture" id=1]
+[ext_resource path="res://assets/misc/Point2.png" type="Texture" id=2]
+[ext_resource path="res://assets/misc/Point3.png" type="Texture" id=3]
+[ext_resource path="res://elements/Point.cs" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 3.78024, 5.87292 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Point1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Point2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Point3",
+"speed": 5.0
+} ]
+
+[node name="Point" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+contacts_reported = 30
+contact_monitor = true
+can_sleep = false
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.115982, -4.01554 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -4 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 2 )
+animation = "Point1"
+[connection signal="Hit" from="." to="." method="_on_Point_Hit"]

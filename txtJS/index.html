@@ -1,0 +1,75 @@
+<html>
+    <script>
+        var knife, cleaver, potato, broom, bucket, mop = false;
+
+        alert("Ready?");
+
+        Hallway("You find yourself in a small hallway. With a");
+
+        function Hallway (m) {
+            let a = prompt(m + " door on you left, front and right. Which do you choose?");
+
+            if (a == "left") {
+                LeftRoom("You open a door to what looks like a janitors closet.");
+            } else if (a == "front") {
+                FinalRoom("You enter the room in front of you.");
+            } else if (a == "right") {
+                RightRoom("You open a door to what looks like a kitchen.");
+            } else {
+                alert("Not accepted answere, try again");
+                Hallway("There is a");
+            }
+        }
+
+        function LeftRoom(m) {
+            let a = prompt(m + " You see a broom, a bucket and a mop. Which do you take?");
+            if (a == "broom") {
+                bucket, mop = false;
+                broom = true;
+                alert("You pick up the broom and turn back to the hallway.");
+                Hallway("There are");
+            } else if (a == "bucket") {
+                broom, mop = false;
+                bucket = true
+                alert("You pick up the bucket and turn back to the hallway.");
+                Hallway("There are");
+            } else if (a == "mop") {
+                broom, bucket = false;
+                mop = true;
+                alert("You pick up the mop and turn back to the hallway.");
+                Hallway("There are");
+            } else {
+                alert("Not an accepted answere, try again");
+                LeftRoom();
+            }
+        }
+
+        function RightRoom(m) {
+            let a = prompt(m + "On the kitchen table you see a knife, a cleaver and a potato. Which do you take?");
+            if (a == "knife") {
+                cleaver, potato = false;
+                knife = true;
+                alert("You pick up the knife and turn back to the hallway.");
+                Hallway("There are");
+            } else if (a == "cleaver") {
+                knife, potato = false;
+                cleaver = true
+                alert("You pick up the cleaver and turn back to the hallway.");
+                Hallway("There are");
+            } else if (a == "potato") {
+                knife, cleaver = false;
+                potato = true;
+                alert("You pick up the potato and turn back to the hallway.");
+                Hallway("There are");
+            } else {
+                alert("Not an accepted answere, try again");
+                RightRoom();
+            }
+        }
+
+        function FinalRoom(m) {
+            alert(m);
+            alert("");
+        }
+    </script>
+</html>
